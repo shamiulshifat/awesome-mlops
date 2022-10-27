@@ -1,5 +1,8 @@
 #!/bin/sh
+
+# ignore exit code 1
 set +e
+
 # Make sure we are using the latest version
 docker pull hysnsec/bandit:latest
 
