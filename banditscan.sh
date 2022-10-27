@@ -10,9 +10,10 @@ if [ ! -d "$REPORT_DIRECTORY" ]; then
 fi
 
 # Make sure we are using the latest version
-docker pull secfigo/bandit:latest
+docker pull cytopia/bandit:latest
 
 docker run --rm \
-    --volume $(pwd):/src \
-    --volume "$REPORT_DIRECTORY":/report \
-    secfigo/bandit:latest
+    --volume $(pwd):/data \
+    --volume "$REPORT_DIRECTORY":/data \
+    cytopia/bandit:latest \
+    -r /data
