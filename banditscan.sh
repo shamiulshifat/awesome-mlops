@@ -1,11 +1,11 @@
 #!/bin/sh
 set +e
 # Make sure we are using the latest version
-docker pull cytopia/bandit:latest
+docker pull hysnsec/bandit:latest
 
 docker run --rm \
     --volume $(pwd):/data \
-    cytopia/bandit:latest \
+    hysnsec/bandit:latest \
     -r /data
  
 set +e
