@@ -7,5 +7,4 @@ docker run --rm \
     --volume $(pwd):/data \
     hysnsec/bandit:latest \
     -r /data
- 
-set +e
+
